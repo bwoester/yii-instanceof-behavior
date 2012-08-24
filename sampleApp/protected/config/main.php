@@ -3,6 +3,8 @@
 // uncomment the following to define a path alias
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
+date_default_timezone_set( 'UTC' );
+
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(

@@ -4,12 +4,19 @@
 // Yii::setPathOfAlias('local','path/to/local-folder');
 
 date_default_timezone_set( 'UTC' );
+Yii::setPathOfAlias( 'prj', __DIR__ . '/../../..' );
 
 // This is the main Web application configuration. Any writable
 // CWebApplication properties can be configured here.
 return array(
 	'basePath'=>dirname(__FILE__).DIRECTORY_SEPARATOR.'..',
-	'name'=>'My Web Application',
+	'name'=>'InstanceofBehavior Demo',
+
+  'behaviors' => array(
+    'instanceof' => array(
+      'class' => 'prj.instanceofBehavior.InstanceofBehavior',
+    ),
+  ),
 
 	// preloading 'log' component
 	'preload'=>array('log'),
@@ -21,6 +28,9 @@ return array(
 	),
 
 	'modules'=>array(
+    'userManager' => array(
+      'class' => 'application.modules.userManager.UserManagerModule',
+    ),
 		// uncomment the following to enable the Gii tool
 		/*
 		'gii'=>array(

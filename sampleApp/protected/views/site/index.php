@@ -280,6 +280,46 @@ $this->pageTitle=Yii::app()->name;
 
 
 
+<h2>A quick negative test:</h2>
+
+<p>
+<?php $this->beginWidget('system.web.widgets.CTextHighlighter', array('language'=>'php')); ?>
+
+  if (Yii::app()->isInstanceof($user,'IAdminUser')) {
+    echo "Hooray, I'm Admin!";
+  } else {
+    echo "(>_<)</br>";
+  }
+
+  if ($instanceofIAdminUser=Yii::app()->isInstanceof($user,'IAdminUser')) {
+    echo "Hooray, I'm Admin!";
+  } else {
+    echo "(>_<)</br>";
+  }
+
+<?php $this->endWidget(); ?>
+</p>
+
+<p>
+<?php
+
+  if (Yii::app()->isInstanceof($user,'IAdminUser')) {
+    echo "Hooray, I'm Admin!";
+  } else {
+    echo "(>_<)</br>";
+  }
+
+  if ($instanceofIAdminUser=Yii::app()->isInstanceof($user,'IAdminUser')) {
+    echo "Hooray, I'm Admin!";
+  } else {
+    echo "(>_<)</br>";
+  }
+
+?>
+</p>
+
+
+
 <h2>And we no longer have to remember under which name we attached the behavior.</h2>
 
 <h2>Do you remember its name? :)</h2>

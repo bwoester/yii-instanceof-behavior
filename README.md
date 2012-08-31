@@ -10,8 +10,8 @@ This behavior allows you to quickly check if a given object, or behaviors that m
 1.  Extract the behavior
 2.  Attach the behavior to your application:
 
-    ~~~
-    [php]
+    ~~~~~ php
+
     // application.config.main
     return array(
    
@@ -24,12 +24,13 @@ This behavior allows you to quickly check if a given object, or behaviors that m
 
       // more config stuff...
     );
-    ~~~
+	
+    ~~~~~
 
 3.  Use it like this
 
-    ~~~
-    [php]
+    ~~~~~php
+	
     // quick version
     // check if $model or one of the behaviors attached to $model implement IRestResource
     if (Yii::app()->isInstanceof($model,'IRestResource'))
@@ -49,4 +50,5 @@ This behavior allows you to quickly check if a given object, or behaviors that m
       /* @var $instance IRestResource */
       // work on $instance. It is an IRestResource.
     }
-    ~~~
+	
+    ~~~~~

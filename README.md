@@ -35,7 +35,7 @@ This behavior allows you to quickly check if a given object, or behaviors that m
     // check if $model or one of the behaviors attached to $model implement IRestResource
     if (Yii::app()->isInstanceof($model,'IRestResource'))
     {
-      /* @var $instance IRestResource */
+      /* @var $model IRestResource */
       // work on $model as if it was an IRestResource
     }
 
